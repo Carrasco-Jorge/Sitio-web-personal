@@ -1,0 +1,96 @@
+/* ---- Header ---- */
+.nav-colored {
+    background-color: white;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.4);
+}
+
+/* No transparent nav bar */
+.nav-transparent {
+    background-color: white;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.4);
+}
+
+.nav-transparent ul a {
+    color: var(--light-blue);
+}
+
+.nav-transparent .logo {
+    color: var(--light-blue);
+}
+
+.nav-transparent .menu-icon .nav-icon {
+    background: #333333;
+}
+
+.nav-transparent .menu-icon .nav-icon:before {
+    background: #333333;
+}
+
+.nav-transparent .menu-icon .nav-icon:after {
+    background: #333333;
+}
+
+/* ---- About ---- */
+main {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portrait-img {
+    background-image: url("/img/Portrait.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    padding: 0 50vw;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+}
+
+.container {
+    padding: 5vh 10vw;
+}
+
+.container > h1 {
+ font-size: xx-large;
+ padding-bottom: 1vh;
+}
+
+.container > p {
+    font-size: larger;
+    line-height: 2rem;
+    padding: 1vh 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-top: 1vh;
+}
+
+.icon {
+    font-size: x-large;
+}
+
+/* Small devices */
+@media (max-width:599px) {
+    .socials {
+        width: 100%;
+    }
+}
+
+/* -- Desktop -- */
+@media (min-width:1025px) {
+    main {
+        flex-direction: row;
+    }
+
+    .portrait-img {
+        padding: 5vh 25vw;
+        height: 80vh;
+    }
+}

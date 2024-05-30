@@ -1,0 +1,116 @@
+/* ---- Header ---- */
+.nav-colored {
+    background-color: white;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.4);
+}
+
+/* No transparent nav bar */
+.nav-transparent {
+    background-color: white;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.4);
+}
+
+.nav-transparent ul a {
+    color: var(--light-blue);
+}
+
+.nav-transparent .logo {
+    color: var(--light-blue);
+}
+
+.nav-transparent .menu-icon .nav-icon {
+    background: #333333;
+}
+
+.nav-transparent .menu-icon .nav-icon:before {
+    background: #333333;
+}
+
+.nav-transparent .menu-icon .nav-icon:after {
+    background: #333333;
+}
+
+/* ---- Project ---- */
+.title {
+    background-color: #5c5c5c;
+    background-image: url("/img/cover_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10vh 0;
+}
+
+.title > h1 {
+    font-size: min(10vmin,48pt);
+    text-align: center;
+    color: white;
+    padding: 0 5vw;
+}
+
+.container {
+    padding: 5vh 10vw;
+    
+}
+.container > h2 {
+    font-size: xx-large;
+    line-height: 4rem;
+}
+
+.container > p {
+    font-size: larger;
+    line-height: 2rem;
+}
+
+.image {
+    width: 70vw;
+    padding: 4vh 5vw;
+}
+
+.dual-image {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    padding: 4vh 5vw;
+}
+
+.dual-image > img {
+    width: 33vw;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    padding: 0 10vw;
+    padding-bottom: 5vh;
+}
+
+.icon {
+    font-size: min(10vmin,4rem);
+}
+
+/* -- Small devices -- */
+@media (max-width:599px) {
+    .dual-image {
+        flex-direction: column;
+        align-items: center;
+        padding: 4vh 5vw;
+    }
+    .dual-image > img {
+        width: 70vw;
+        padding: 1vh 0;
+    }
+}
+
+/* ---- Desktop ---- */
+@media (min-width:1025px) {
+    .socials {
+        width: 40vw;
+    }
+}

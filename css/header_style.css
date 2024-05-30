@@ -1,0 +1,168 @@
+/* ======== HEADER / NAV BAR ======== */
+/* ---- Mobile ---- */
+header {   
+    width: 100%;
+    /* Important thing for sticky menu */
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    /* Background transition */
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-colored {
+    background-color: white;
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.4);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul a {
+    display: block;
+    padding: 20px;
+    font-size: larger;
+    text-decoration: none;
+    color: var(--light-blue);
+    transition: background 0.1s ease-out;
+}
+
+nav ul a:hover {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+nav .logo {
+    float: left;
+    display: block;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--light-blue);
+    padding: 10px 20px;
+}
+
+/* Drop menu */
+nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+nav .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+nav .menu-icon .nav-icon {
+    background: #333333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+nav .menu-icon .nav-icon:before {
+    background: #333333;
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all 0.2s ease-out;
+    top: 5px;
+}
+
+nav .menu-icon .nav-icon:after {
+    background: #333333;
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all 0.2s ease-out;
+    top: -5px;
+}
+
+nav .menu-btn {
+    display: none;
+}
+
+nav .menu-btn:checked ~ .menu {
+    max-height: 400px;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/* Transparent nav bar */
+.nav-transparent {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.nav-transparent ul a {
+    color: white;
+}
+
+.nav-transparent .logo {
+    color: white;
+}
+
+.nav-transparent .menu-icon .nav-icon {
+    background: white;
+}
+
+.nav-transparent .menu-icon .nav-icon:before {
+    background: white;
+}
+
+.nav-transparent .menu-icon .nav-icon:after {
+    background: white;
+}
+
+/* ---- Desktop ---- */
+
+@media (min-width:1025px) {
+    nav {
+        height: auto;
+        overflow: hidden;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0;
+        float: right;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    nav .menu-icon {
+        display: none;
+    }
+}

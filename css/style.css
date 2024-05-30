@@ -1,0 +1,16 @@
+:root {
+    --dark-blue: #030840;
+    --mid-blue: #123173;
+    --light-blue: #006FE6;
+    --light-grey: #D9D2CE;
+    --mid-brown: #8B5538;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "Times New Roman", Times, serif; */
+    font-family: 'Roboto', sans-serif;
+}

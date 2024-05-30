@@ -1,0 +1,80 @@
+/* ======== FOOTER ======== */
+footer {
+    background-color: var(--dark-blue);
+    /* height: 200px; */
+    padding-bottom: 6vh;
+}
+
+/* -- Contact -- */
+#contact {
+    background-color: #5c5c5c;
+    /* background-color: white; */
+    background-image: url("../img/cover_03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    height: fit-content;
+    padding: 5vh;
+}
+
+#contact h1 {
+    text-align: center;
+    font-size: 5vmax;
+    padding-top: 5vh;
+    color: white;
+}
+
+.small-card {
+    width: min(20em,50vmin);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon {
+    font-size: min(10em,20vmin);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.icon > i {
+    color: var(--light-blue);
+    transition: color 0.15s ease-in-out;
+
+    border-radius:50%;
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% {
+        transform: scale(0.95);
+    }
+    
+    70% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(0.95);
+    }
+  }
+
+#contact h2 {
+    font-size: x-large;
+    color: white;
+}
+
+/* ---- Desktop ---- */
+@media (min-width:1025px) {
+    /* -- Contact -- */
+    .icon:hover > i {
+        color: var(--light-grey);
+    }
+
+}
