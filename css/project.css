@@ -39,7 +39,7 @@
     background-position: center;
     background-blend-mode: multiply;
     width: 100vw;
-    height: 40vh;
+    min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -134,10 +134,14 @@
     object-fit: contain;
 }
 
+.word-break {
+    word-break: break-all;
+}
+
 .socials {
     display: flex;
     justify-content: space-between;
-    width: 80vw;
+    width: 80%;
     padding: 0 10vw;
     padding-bottom: 5vh;
 }
@@ -162,6 +166,6 @@
 /* ---- Desktop ---- */
 @media (min-width:1025px) {
     .socials {
-        width: 40vw;
+        width: 40%;
     }
 }

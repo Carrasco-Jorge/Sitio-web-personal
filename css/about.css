@@ -44,7 +44,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    min-height: 50vh;
     padding: 0 50vw;
     padding-top: 5vh;
     padding-bottom: 10vh;
@@ -68,7 +68,7 @@ main {
 .socials {
     display: flex;
     justify-content: space-between;
-    width: 50vw;
+    width: 50%;
     padding-top: 1vh;
 }
 
@@ -79,7 +79,7 @@ main {
 /* Small devices */
 @media (max-width:599px) {
     .socials {
-        width: 100vw;
+        width: 100%;
     }
 }
 
