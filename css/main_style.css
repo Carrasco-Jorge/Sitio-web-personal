@@ -338,6 +338,10 @@
     background-blend-mode: multiply;
 }
 
+#contact h2 {
+    text-align: center;
+}
+
 /* ---- Small device ---- */
 @media (max-width: 599px) {
     .introduction > h2 {
