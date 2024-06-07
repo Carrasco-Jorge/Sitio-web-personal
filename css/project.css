@@ -46,6 +46,10 @@
     padding: 10vh 0;
 }
 
+.title1 {
+    background-image: url("../html/proyectos/proyecto1/img/Ingresos\ y\ Margen\ bruto\ por\ Estado\ 300\ gif.gif");
+}
+
 .title > h1 {
     font-size: min(10vmin,48pt);
     text-align: center;
@@ -67,6 +71,52 @@
     line-height: 2rem;
 }
 
+.container > ul {
+    list-style-type:disc;
+    list-style-position: outside;
+    line-height: 1.5em;
+    font-size: larger;
+    height: fit-content;
+    padding: 1em 1.5em;
+}
+
+.container > ul > li > ul {
+    list-style-type:circle;
+    list-style-position: outside;
+    height: fit-content;
+    padding: 1em 1.5em;
+}
+
+.container > ol {
+    list-style-type:decimal;
+    list-style-position: outside;
+    line-height: 1.5em;
+    font-size: larger;
+    height: fit-content;
+    padding: 1em 1.5em;
+}
+
+.container > ol > li > ul {
+    list-style-type:circle;
+    list-style-position: outside;
+    height: fit-content;
+    padding: 1em 1.5em;
+}
+
+.container strong {
+    font-weight: bold;
+}
+
+.container > h3 {
+    font-size: x-large;
+    line-height: 4rem;
+}
+
+.container code {
+    font-family: monospace;
+    font-size: larger;
+}
+
 .image {
     width: 70vw;
     padding: 4vh 5vw;
@@ -81,6 +131,7 @@
 
 .dual-image > img {
     width: 33vw;
+    object-fit: contain;
 }
 
 .socials {

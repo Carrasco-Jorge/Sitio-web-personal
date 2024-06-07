@@ -1,0 +1,271 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de ventas para empresa E-commerce</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Alertify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Alertify Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- My styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header_style.css">
+    <link rel="stylesheet" href="/css/footer_style.css">
+    <link rel="stylesheet" href="/css/project.css">
+</head>
+<body>
+    <header id="Nav" class="nav-transparent">
+        <nav>
+            <a href="/" class="logo">JC</a>
+
+            <div>
+                <input id="menu-btn" class="menu-btn" type="checkbox">
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            
+
+                <ul class="menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pdf/JorgeCarrasco_cv.pdf" target="_blank">CV</a></li>
+                    <li><a href="/html/proyectos/proyecto1/project1_en.html">English</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="title title1">
+            <h1>Reporte de ventas para empresa E-commerce</h1>
+        </div>
+        <div class="container">
+            <h2>Descripción del problema</h2>
+            <p>En este proyecto se aborda un problema de una empresa de E-commerce de la India, la cual tiene un <a href="#origen-de-los-datos">conjunto de datos</a> de los pedidos realizados en el periodo <strong>2018/04 — 2019/03</strong> y los objetivos de ingresos (revenue) por mes. Con esta información se quiere:</p>
+
+            <ul>
+                <li>Detectar cuáles son las categorías de productos que generan más ingresos y tienen mayor rendimiento económico</li>
+                <li>Comparar el desempeño financiero por región geográfica</li>
+                <li>Identificar las ubicaciones geográficas que aportan mayores ingresos promedio</li>
+                <li>Visualizar el desempeño financiero de la empresa en el tiempo</li>
+            </ul>
+
+            <p>Donde se pueda utilizar una herramienta fácil de usar por personas no técnicas para consultar dicha información y, si se quiere, poder revisar con detalle la información de interés.</p>
+
+            <h3>El conjunto de datos</h3>
+
+            <p>El conjunto de datos de la empresa consiste de tres archivos CSV, cada uno con una tabla. Estos archivos son: <code>List of Orders.csv</code>, <code>Order Details.csv</code> y <code>Sales target.csv</code>, los cuales contienen las siguientes características:</p>
+            <br>
+            <p><strong>List of Orders.csv</strong></p>
+            <br>
+            <p>Tabla con la información esencial de los pedidos. En principio debería contener solamente una fila por cada pedido realizado.
+            <ul>
+                <li><strong>Order ID:</strong> Identificador único de cada pedido</li>
+                <li><strong>Order Date:</strong> Fecha en que se hizo el pedido</li>
+                <li><strong>CustomerName:</strong> Nombre del cliente que realizó el pedido</li>
+                <li><strong>State:</strong> Estado a donde se enviará el pedido</li>
+                <li><strong>City:</strong> Ciudad a donde se enviará el pedido</li>
+            </ul>
+            </p>
+
+            <p><strong>Order Details.csv.csv</strong></p>
+            <br>
+            <p>Tabla con la información de los productos incluidos en cada pedido. Puede haber más de una fila por pedido, puesto que cada pedido puede contener productos de diferente categoría y sub-categoría.
+            <ul>
+                <li><strong>Order ID:</strong> Identificador único de cada pedido</li>
+                <li><strong>Amount:</strong> Ingresos (revenue) generados por los artículos del pedido</li>
+                <li><strong>Profit:</strong> Ganancias o pérdidas generadas por los artículos del pedido</li>
+                <li><strong>Quantity:</strong> Cantidad de artículos en el pedido</li>
+                <li><strong>Category:</strong> Categoría de los artículos. Por ejemplo, electrónicos</li>
+                <li><strong>Sub-Category:</strong> Sub-categoría de los artículos. Por ejemplo, impresoras</li>
+            </ul>
+            </p>
+
+            <p><strong>Sales target.csv</strong></p>
+            <br>
+            <p>Tabla con la información de los objetivos financieros de la empresa por mes, por categoría.
+            <ul>
+                <li><strong>Month of Order Date:</strong> Mes y año</li>
+                <li><strong>Category:</strong> Categoría de artículos. Por ejemplo, electrónicos</li>
+                <li><strong>Target:</strong> Ingresos (revenue) objetivo</li>
+            </ul>
+            </p>
+            
+            <h2 id="puntos-clave">Puntos clave del problema</h2>
+
+            <ul>
+                <li>La herramienta desarrollada debe poder usarse por personas no técnicas</li>
+                <li>Se requiere poder Visualizar la información más importante</li>
+                <li>Es necesario poder consultar los detalles de la información</li>
+                <li>Detectar las categorías/sub-categorías que generan más ingreso y más ganancia o menos pérdida</li>
+                <li>Comparar el desempeño financiero por región geográfica</li>
+                <li>Identificar las ubicaciones geográficas que aportan mayores ingresos promedio</li>
+                <li>Visualizar el desempeño financiero de la empresa en el tiempo</li>
+                <li>Variables más relevantes:
+                    <ul>
+                    <li><strong>Order ID:</strong> conectar tablas <code>List of Orders</code> y <code>Order Detalis</code>; contar número de pedidos únicos</li>
+                    <li><strong>Order Date:</strong> transformar para conectar la información de los pedidos con la tabla Sales target</li>
+                    <li><strong>Month of Order Date:</strong> transformar para conectar la información de los pedidos con la tabla Sales target</li>
+                    <li><strong>State: </strong>agrupar información por región geográfica</li>
+                    <li><strong>City:</strong> agrupar información por región geográfica</li>
+                    <li><strong>Amount:</strong> información de revenue / ingresos</li>
+                    <li><strong>Profit: </strong>información de ganancias / pérdidas</li>
+                    <li><strong>Category:</strong> agrupar información por categoría</li>
+                    <li><strong>Sub-category:</strong> agrupar información por sub-categoría</li>
+                    <li><strong>Target:</strong> información de ingresos objetivo</li>
+                </ul></li>
+            </ul>
+
+            <h2>Propuesta de solución</h2>
+
+            <p>Se propone crear un archivo / reporte de Excel con 3 hojas como se puede ver en este <a href="#ejemplo-propuesta">ejemplo de propuesta</a>:</p>
+
+            <ol>
+                <li>Ingresos, Margen bruto y comparación con Ingresos objetivo en el tiempo</li>
+                <li>Ingresos y Margen bruto por Categoría y Sub-categoría de productos</li>
+                <li>Ingresos, Margen bruto e Ingresos promedio por Estado</li>
+            </ol>
+
+            <p>Se puede decir que esta propuesta puede ser utilizada por gente no técnica de manera fácil ya que es desarrollada en Excel y cuenta con una interfaz bastante estándar (gráficas y tablas dinámicas). También, aborda los <a href="#puntos-clave">puntos clave del problema</a>:</p>
+
+            <ul>
+                <li>El formato condicional con íconos representativos (❌❕✅) en las tablas dinámicas facilita ver qué tan bien se logró el desempeño objetivo de la empresa en margen bruto y en ingreso objetivo</li>
+                <li>Las gráficas de barras y de pastel resumen la información más importante acerca de las categorías / sub-categorías y regiones geográficas con mayor aporte de ingresos</li>
+                <li>Las gráficas también muestran la comparación entre las regiones geográficas y las categorías / sub-categorías</li>
+                <li>Las tablas dinámicas cuentan con filtros y/o campos desplegables para proporcionar una manera fácil y visual de consultar los detalles de la información</li>
+            </ul>
+
+            <h3 id="ejemplo-propuesta">Ejemplo de propuesta</h3>
+
+            <img src="./img/Ingresos y Margen bruto por Estado.png" alt="Reporte 3" class="image">
+            <div class="dual-image">
+                <img src="./img/Ingresos y Margen bruto en el tiempo.png" alt="Reporte 1">
+                <img src="./img/Ingresos y Margen bruto por Categoria y Subcategoria.png" alt="Reporte 2">
+            </div>
+            
+            <h2>Implementación de solución en Excel</h2>
+            <h3>Extraer, Transformar y Cargar datos con Power Query y Power Pivot</h3>
+            <p>Primero, se cargaron los tres archivos <code>List of Orders.csv</code>, <code>Order Details.csv</code> y <code>Sales target.csv</code> en Power Query como archivos CSV (posteriormente se utilizó una conexión a <a href="https://github.com/Carrasco-Jorge/Analisis-ventas-E-commerce">este repositorio</a> de GitHub). Después, se aplicaron las siguientes pipelines a cada una de las tablas.</p>
+            <br>
+            <p><strong>Pipeline <code>Order Details</code></strong></p>
+            <ol>
+                <li>Source: extraer datos de <a href="https://github.com/Carrasco-Jorge/Analisis-ventas-E-commerce">este repositorio</a> de GitHub</li>
+                <li>Promoted Headers: usar primera fila del archivo CSV como nombres de columnas</li>
+                <li>Changed Type: auto-detectar tipos de dato de las columnas</li>
+                <p>--- Limpieza de datos ---</p>
+                <li>Quitar filas vacías</li>
+                <li>Renombrar columna Amount a Revenue</li>
+            </ol>
+            
+            <p><strong>Pipeline <code>List of Orders</code></strong></p>
+            <ol>
+                <li>Source: extraer datos de <a href="https://github.com/Carrasco-Jorge/Analisis-ventas-E-commerce">este repositorio</a> de GitHub</li>
+                <li>Promoted Headers: usar primera fila del archivo CSV como nombres de columnas</li>
+                <li>Changed Type: auto-detectar tipos de dato de las columnas</li>
+                <p>--- Limpieza de datos ---</p>
+                <li>Quitar filas vacías</li>
+                <li>Quitar duplicados de <strong>Order ID</strong></li>
+                <p>--- Transformación de datos ---</p>
+                <li>Agregar columna Month a partir de <strong>Order Date</strong></li>
+                <li>Agregar columna <strong>Month number</strong> a partir de <strong>Order Date</strong></li>
+                <li>Cambiar tipo de dato de <strong>Month number</strong> a número</li>
+                <li>Agregar columna <strong>Year</strong> a partir de <strong>Order Date</strong></li>
+            </ol>
+            <p><strong>Pipeline <code>Sales target</code></strong></p>
+            <ol>
+                <li>Source: extraer datos de <a href="https://github.com/Carrasco-Jorge/Analisis-ventas-E-commerce">este repositorio</a> de GitHub</li>
+                <li>Promoted Headers: usar primera fila del archivo CSV como nombres de columnas</li>
+                <li>Changed Type: auto-detectar tipos de dato de las columnas</li>
+                <p>--- Transformación de datos ---</p>
+                <li>Agregar columna <strong>Year</strong> a partir de <strong>Month of Order Date</strong></li>
+                <li>Agregar columna <strong>Month</strong> a partir de <strong>Month of Order Date</strong></li>
+                <li>Agregar columna <strong>Date id</strong> a partir de las columnas <strong>Year</strong>, <strong>Month</strong> y <strong>Category</strong> (ejemplo de ID: <code>201804Furniture</code>) <ul>
+                    <li>Se puede construir un ID único para cada fila de esta manera puesto que solo hay un ingreso objetivo para cada categoría en cada año y cada mes de ese año</li>
+                </ul> </li>
+                <li>Cambiar tipo de dato de <strong>Date id</strong> a texto</li>
+            </ol>
+
+            <img src="./img/Power Query.png" alt="ETL en Power Query" class="image">
+
+            <p><strong>Modelo de datos en Power Pivot</strong></p>
+            <p>Para poder juntar (JOIN) la información del conjunto de datos, las tablas se identificaron de la siguiente manera:</p>
+
+            <p>Tablas con claves principales (primary keys)</p>
+            <ul>
+                <li><code>List of Orders:</code> <strong>Order ID</strong></li>
+                <li><code>Sales target</code><strong>Date id</strong></li>
+            </ul>
+
+            <p>Tabla con claves externas (foreign keys)</p>
+            <ul>
+                <li><code>
+                    Order Details:</code> <strong> Order ID</strong> y falta crear <strong>Date id</strong> con la información de <code>List of Orders</code>
+                </li>
+            </ul>
+
+            <p>Primero se hace la conexión de <code>Order Details</code> con <code>List of Orders</code> y se crean las columnas <strong>Year</strong> y <strong>Monthname</strong> usando las expresiones <strong>DAX</strong>:</p>
+            <code>
+                <br>
+                =RELATED('List of Orders'[Month])
+                <br><br>
+                =RELATED('List of Orders'[Year])
+            </code>
+
+            <p><br>Para luego crear la columna <strong>Date id</strong> con al siguiente expresión <strong>DAX</strong>:</p>
+            <br>
+            <code>
+                =CONCATENATE(FORMAT([Year]*100+[Monthnumber],"General Number"),Category])
+            </code>
+            <p><br>Luego, ya es posible crear la conexión de <code>Order Details</code> con <code>Target Sales</code>. Así, se obtiene el siguiente modelo de datos:</p>
+
+            <img src="./img/Power%20Pivot%202.png" alt="Modelo de datos en Power Pivot 2" class="image">
+            <p>Finalmente, se usan expresiones <strong>DAX</strong> de la forma <code>=RELATED('Tabla'[Columna])</code> para juntar (JOIN) la información. Así, se obtiene la siguiente tabla:</p>
+            <img src="./img/Power%20Pivot%201.png" alt="Modelo de datos en Power Pivot 1" class="image">
+
+            <h3 id="metricas-con-power-pivot">Creación de métricas con Power Pivot</h3>
+            <p>Ya para finalizar el procesamiento de los datos, se crearon las siguientes métricas y métricas auxiliares para mostrar la información relevante y requerida en los reportes:</p>
+            <ul>
+            <li><strong>Expenses</strong>: costos calculados usando los ingresos y la ganancia / pérdida de los productos. <strong>DAX:</strong> <code>=SUM('Order Details'[Revenue])-SUM('Order Details'[Profit])</code></li>
+            <li><strong>Margen bruto %</strong>: eficiencia de la empresa en la producción y venta de los productos. <strong>DAX</strong> <code>=SUM([Profit])/[Suma de Revenue]</code></li>
+            <li><strong>Max target</strong>: métrica <strong>auxiliar</strong> para calcular correctamente el ingreso objetivo en las tablas dinámicas. <strong>DAX</strong> <code>MAX('Order Details'[RevenueTarget])</code></li>
+            <li><strong>Target Revenue</strong>: métrica para calcular correctamente el ingreso objetivo en las tablas dinámicas. <strong>DAX</strong> <code>SUMX(DISTINCT('Order Details'[Dateid]),[Max target])</code></li>
+            <li><strong>Actual - Target</strong>: diferencia absoluta entre los ingresos reales y los ingresos objetivo. <strong>DAX</strong> <code>[Suma de Revenue]-[Target Revenue]</code></li>
+            <li><strong>Actual - Target %</strong>: diferencia entre los ingresos reales y los ingresos objetivo relativa a los ingresos objetivo. <strong>DAX</strong> <code>[Actual - Target]/[Target Revenue]</code></li>
+            <li><strong>Avg Revenue / Order</strong>: ingresos promedio por pedido. <strong>DAX</strong> <code>[Suma de Revenue]/[Recuento de Order ID]</code></li>
+            </ul>
+
+            <h2 id="resultado-final">Resultado final</h2>
+            <img src="./img/Ingresos%20y%20Margen%20bruto%20en%20el%20tiempo.png" alt="Reporte 1" class="image">
+            
+            <div class="dual-image">
+                <img src="./img/Ingresos%20y%20Margen%20bruto%20por%20Categoria%20y%20Subcategoria%20300%20gif.gif" alt="Reporte 2-1">
+                <img src="./img/Ingresos%20y%20Margen%20bruto%20por%20Estado%20300%20gif.gif" alt="Reporte 3-1">
+            </div>
+            
+            <img src="./img/Ingresos%20y%20Margen%20bruto%20por%20Categoria%20y%20Subcategoria.png" alt="Reporte 2-2" class="image">
+            
+            <img src="./img/Ingresos%20y%20Margen%20bruto%20por%20Estado.png" alt="Reporte 3-2" class="image">
+            
+            <h2 id="origen-de-los-datos">Origen de los datos</h2>
+            <p><strong>Origen de los datos: <a href="https://www.kaggle.com/datasets/benroshan/ecommerce-data/data?select=Sales+target.csv">https://www.kaggle.com/datasets/benroshan/ecommerce-data/data?select=Sales+target.csv</a></strong></p>
+            <p><strong>Licencia original de los datos: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></strong></p>
+
+
+        </div>
+        <div class="socials">
+            <a href="https://github.com/Carrasco-Jorge" target="_blank" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <button onclick="copy_to_clipboard('carrascoislasjorge@gmail.com','Correo electrónico',1)" class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            <a href="https://www.linkedin.com/in/jc-lma/" target="_blank" class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <button onclick="copy_to_clipboard('+522216368097','Número telefónico',1)" class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></button>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- JavaScript -->
+    <script src="/js/navbar.js"></script>
+    <script src="/js/clipboard.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</body>
+</html>
