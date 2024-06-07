@@ -4,7 +4,7 @@
 #cover {
     background-color: #5f5f5f;
     /* background-color: white; */
-    background-image: url("../img/cover_05.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_05.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -79,7 +79,7 @@
 }
 
 #portfolio .card-img {
-    /* background-image: url("../img/cover_04.jpg"); */
+    /* background-image: url("/Sitio-web-personal/img/cover_04.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,19 +87,19 @@
 }
 
 .project-1 {
-    background-image: url("../html/proyectos/proyecto1/img/Ingresos\ y\ Margen\ bruto\ por\ Estado\ 300\ gif.gif");
+    background-image: url("/Sitio-web-personal/html/proyectos/proyecto1/img/Ingresos\ y\ Margen\ bruto\ por\ Estado\ 300\ gif.gif");
 }
 
 .project-2 {
-    background-image: url("../img/cover_02.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_02.jpg");
 }
 
 .project-3 {
-    background-image: url("../img/cover_03.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_03.jpg");
 }
 
 .project-4 {
-    background-image: url("../img/cover_04.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_04.jpg");
 }
 
 #portfolio .card-title {
@@ -161,7 +161,7 @@
 }
 
 .background {
-    background-image: url("../img/cover_03.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_03.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -310,31 +310,31 @@
 
 .exp1 {
     background-color: #4f4f4f;
-    background-image: url("../img/cover_01.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_01.jpg");
     background-blend-mode: multiply;
 }
 
 .exp2 {
     background-color: #4f4f4f;
-    background-image: url("../img/cover_02.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_02.jpg");
     background-blend-mode: multiply;
 }
 
 .exp3 {
     background-color: #4f4f4f;
-    background-image: url("../img/cover_03.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_03.jpg");
     background-blend-mode: multiply;
 }
 
 .exp4 {
     background-color: #4f4f4f;
-    background-image: url("../img/cover_04.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_04.jpg");
     background-blend-mode: multiply;
 }
 
 .exp5 {
     background-color: #4f4f4f;
-    background-image: url("../img/Cover_05.jpg");
+    background-image: url("/Sitio-web-personal/img/Cover_05.jpg");
     background-blend-mode: multiply;
 }
 

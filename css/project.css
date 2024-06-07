@@ -33,7 +33,7 @@
 /* ---- Project ---- */
 .title {
     background-color: #5c5c5c;
-    background-image: url("/img/cover_01.jpg");
+    background-image: url("/Sitio-web-personal/img/cover_01.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -47,7 +47,7 @@
 }
 
 .title1 {
-    background-image: url("../html/proyectos/proyecto1/img/Ingresos\ y\ Margen\ bruto\ por\ Estado\ 300\ gif.gif");
+    background-image: url("/Sitio-web-personal/html/proyectos/proyecto1/img/Ingresos\ y\ Margen\ bruto\ por\ Estado\ 300\ gif.gif");
 }
 
 .title > h1 {
