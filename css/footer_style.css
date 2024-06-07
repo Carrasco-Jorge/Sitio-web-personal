@@ -47,7 +47,7 @@ footer {
     color: var(--light-blue);
     transition: color 0.15s ease-in-out;
 
-    border-radius:50%;
+    border-radius:50vw;
     animation: pulse-blue 2s infinite;
 }
 

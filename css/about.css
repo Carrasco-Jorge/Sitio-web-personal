@@ -68,7 +68,7 @@ main {
 .socials {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 50vw;
     padding-top: 1vh;
 }
 
@@ -79,7 +79,7 @@ main {
 /* Small devices */
 @media (max-width:599px) {
     .socials {
-        width: 100%;
+        width: 100vw;
     }
 }
 

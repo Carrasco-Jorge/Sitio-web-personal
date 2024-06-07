@@ -1,7 +1,7 @@
 /* ======== HEADER / NAV BAR ======== */
 /* ---- Mobile ---- */
 header {   
-    width: 100%;
+    width: 100vw;
     /* Important thing for sticky menu */
     position: fixed;
     top: 0;
