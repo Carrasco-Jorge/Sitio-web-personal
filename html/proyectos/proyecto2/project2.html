@@ -1,0 +1,146 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla proyecto</title>
+    <link rel="icon" type="image/x-icon" href="/Sitio-web-personal/img/favicon.ico">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Alertify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Alertify Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- My styles -->
+    <link rel="stylesheet" href="/Sitio-web-personal/css/reset.css">
+    <link rel="stylesheet" href="/Sitio-web-personal/css/style.css">
+    <link rel="stylesheet" href="/Sitio-web-personal/css/header_style.css">
+    <link rel="stylesheet" href="/Sitio-web-personal/css/footer_style.css">
+    <link rel="stylesheet" href="/Sitio-web-personal/css/project.css">
+</head>
+<body>
+    <header id="Nav" class="nav-transparent">
+        <nav>
+            <a href="/Sitio-web-personal/index.html" class="logo">JC</a>
+
+            <div>
+                <input id="menu-btn" class="menu-btn" type="checkbox">
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            
+
+                <ul class="menu">
+                    <li><a href="/Sitio-web-personal/index.html">Inicio</a></li>
+                    <li><a href="/Sitio-web-personal/pdf/CV - JORGE CARRASCO ISLAS.pdf" target="_blank">CV</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="title title1">
+            <h1>Plantilla de proyecto</h1>
+        </div>
+        <div class="container">
+            <h2>Descripción de los datos</h2>
+
+            <p>Información sobre la población estimada de personas pertenecientes a varios grupos de edad que tienen niveles de educación específicos. Información acumulada a un nivel de los distritos congresuales de EUA para años determinados.</p>
+
+            <ul>
+                <li>Año</li>
+                <li>Distrito congresual (Congressional district)</li>
+                <li>Individuos con Licenciatura (Bachelor's degree) o un grado mayor</li>
+                <li>Individuos con Certificado de preparatoria (highschool diploma) o algún grado</li>
+                <li>Individuos con educación menor a tener Certificado de preparatoria</li>
+            </ul>
+
+            <p>Donde cada fila representa la partición de la población en cada Distrito congresual (Congressional district) por nivel de educación, por año (2020 y 2021). El nivel educativo se refiere al equivalente de educación superior, educación media superior y menos de educación media superior en México.</p>
+
+            <h2>Preguntas que se quieren responder</h2>
+
+            <ol>
+                <li>¿Cuál es la distribución de la educación en el país? (2020 y 2021)</li>
+                <li>¿Cuál es el top 5 con la mayor proporción de individuos con educación superior? (2020 y 2021, distritos congresuales y estados)</li>
+                <li>¿Cuál es el bottom 5 con la menor proporción de individuos con educación superior? (2020 y 2021, distritos congresuales y estados)</li>
+                <li>¿Cuál es el top 5 con la mayor proporción de individuos con menos de educación media superior? (2020 y 2021, distritos congresuales y estados)</li>
+                <li>¿Cuál es el bottom 5 con la menor proporción de individuos con menos de educación media superior? (2020 y 2021, distritos congresuales y estados)</li>
+                <li>¿Cuáles son las regiones con un mayor aumento porcentual en educación superior de 2020 a 2021? (distritos congresuales y estados)</li>
+                <li>¿Cuáles son las regiones con un menor aumento porcentual en educación superior de 2020 a 2021? (distritos congresuales y estados)</li>
+            </ol>
+
+            <h2>Propuesta de solución</h2>
+            <h3>Reportes puntuales en Excel</h3>
+            <p>Reportes estáticos en Excel que muestren gráficos y tablas comparativas que respondan las preguntas planteadas por estado, distrito congresual y año.</p>
+
+            <div class="dual-image">
+                <img src="./img/Reporte-excel-tablas1.png" alt="Reporte 1">
+                <img src="./img/Reporte-excel-tablas2.png" alt="Reporte 2">
+            </div>
+
+            <h3>Dashboard interactivo en python con streamlit</h3>
+            <p>Dashboard interactivo que aborde las preguntas planteadas referentes a los estados por año y que muestre información complementaria de las proporciones por niveles educativos.</p>
+
+            <img src="./img/Dashboard.gif" alt="Reporte 3" class="image">
+
+            <h2>Revisión y limpieza de datos</h2>
+            <p>Se hizo la siguiente revisión de calidad de los datos como se muestra en el notebook <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Revision%20de%20datos/Educacion.ipynb">Educacion.ipynb</a>:</p>
+            <ul>
+                <li>Datos faltantes</li>
+                <li>Duplicados y valores únicos en Año y Distrito congresual</li>
+                <li>Rangos de valores numéricos</li>
+            </ul>
+            <p>En Excel se hizo el mismo procedimiento utilizando <strong>Power Query</strong>, como se puede ver en este <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Reportes%20Excel/Educacion.xlsx">libro de Excel</a>.</p>
+
+            <h2>Transformación de datos</h2>
+            <p>Se hizo la siguiente transformación de datos como se muestra en el notebook <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Revision%20de%20datos/Educacion.ipynb">Educacion.ipynb</a>:</p>
+            <ul>
+                <li>Mapear códigos de estado a nombre de estado (<strong>AK</strong>-><strong>Alaska</strong>)</li>
+                <li>Agregar datos de educación por estado</li>
+                <li>Crear columnas con proporciones (%) por nivel educativo por estado por año</li>
+                <li>Calcular diferencia en puntos porcentuales de 2020 a 2021 por nivel educativo por estado</li>
+            </ul>
+            <p>En Excel se hizo el mismo procedimiento utilizando <strong>Power Query</strong>, como se puede ver en este <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Reportes%20Excel/Educacion.xlsx">libro de Excel</a>.</p>
+
+            <h2>Respuesta a preguntas planteadas</h2>
+            <p>Las respuestas a todas las preguntas planteadas son responddas por los reportes generados en Excel contenidos en el archivo PDF: <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Reportes%20Excel/Educacion.pdf">Educacion.pdf</a>. Estos reportes tienen un formato similar a los siguientes:</p>
+
+            <div class="dual-image">
+                <img src="./img/Reporte-excel-tablas1.png" alt="Reporte 1">
+                <img src="./img/Reporte-excel-tablas2.png" alt="Reporte 2">
+            </div>
+
+            <p>Estos reportes cuentan con un formato condicional que facilita la lectura de la información y la comparación entre los distintos estados y distritos congresuales a los que se hace referencia.</p>
+
+            <h2>Dashboard en python con streamlit</h2>
+            <p>El dashboard desarrollado en python con streamlit responde todas las preguntas planteadas referentes a los estados y muestra información complementaria como:</p>
+
+            <ul>
+                <li>Top 10 en vez de Top 5 estados para niveles educativos por año seleccionado</li>
+                <li>Aumento / Cambio % de 2020 a 2021 para los tres niveles educativos</li>
+                <li>Gráfica de pastel para la distribución del nivel educativo para EUA y todos los estados</li>
+                <li>Mapa interactivo que representa los porcentajes del nivel educativo seleccionado por estado, por año seleccionado</li>
+            </ul>
+
+            <img src="./img/Dashboard.gif" alt="Reporte 3" class="image">
+
+            <h2>Origen de los datos</h2>
+
+            <p class="word-break"><strong>Origen de los datos: <a href="https://www.kaggle.com/datasets/mittvin/u-s-census-dataset-education-finance-industry/data">https://www.kaggle.com/datasets/mittvin/u-s-census-dataset-education-finance-industry/data</a></strong></p>
+            <p><strong>Licencia original de los datos: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></strong></p>
+
+        </div>
+        <div class="socials">
+            <a href="https://github.com/Carrasco-Jorge" target="_blank" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <button onclick="copy_to_clipboard('carrascoislasjorge@gmail.com','Correo electrónico',1)" class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            <a href="https://www.linkedin.com/in/jc-lma/" target="_blank" class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <button onclick="copy_to_clipboard('+522216368097','Número telefónico',1)" class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></button>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- JavaScript -->
+    <script src="/Sitio-web-personal/js/navbar.js"></script>
+    <script src="/Sitio-web-personal/js/clipboard.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</body>
+</html>
