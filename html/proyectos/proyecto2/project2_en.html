@@ -33,7 +33,7 @@
                 <ul class="menu">
                     <li><a href="/Sitio-web-personal/index_en.html">Home</a></li>
                     <li><a href="/Sitio-web-personal/pdf/RESUME - JORGE CARRASCO ISLAS.pdf" target="_blank">Resume</a></li>
-                    <li><a href="#">Español</a></li>
+                    <li><a href="/Sitio-web-personal/html/proyectos/proyecto2/project2.html">Español</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,20 +43,91 @@
             <h1>Dashboard: USA Education 2020 vs 2021</h1>
         </div>
         <div class="container">
-            <h2>Introduction</h2>
+            <h2>The dataset</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio, porro rerum ducimus error similique quod fugit! Nisi iure ad, minima, sapiente eos totam ratione explicabo ipsam officiis nostrum officia. Accusantium ipsum atque expedita delectus, assumenda error ut perspiciatis, aut consequatur architecto, dolore voluptatum incidunt sequi ex! Molestiae, odio illum non vitae magnam tenetur eligendi deleniti quidem autem! Facilis illo praesentium eum omnis dolore nihil vero veniam qui iure iusto labore earum aliquam delectus reprehenderit ex facere repellendus nemo alias voluptatum necessitatibus culpa voluptates, sit accusamus ea. Ea numquam natus sed dicta totam exercitationem consequuntur autem at, placeat aperiam voluptatibus?</p>
+            <p>Information about the estimated population of people belonging to various age groups who have specific levels of education. Aggregated information at the level of US congressional districts for specific years.</p>
 
-            <img class="image" src="/Sitio-web-personal/img/cover_04.jpg" alt="">
+            <ul>
+                <li>Year</li>
+                <li>Congressional district</li>
+                <li>Individuals with a Bachelor's degree or higher education</li>
+                <li>Individuals with highschool diploma or some degree</li>
+                <li>Individuals with less than high school diploma</li>
+            </ul>
 
-            <h2>Methodology</h2>
+            <p>Where each row represents the partition of the population in each Congressional district by level of education, by year (2020 and 2021). The educational level refers to the equivalent of higher education, high school education and less than high school education in Mexico.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi porro, non in vero omnis inventore quidem corporis neque ipsam exercitationem aspernatur quisquam, aliquid accusantium est reprehenderit expedita doloremque voluptates accusamus ipsa. Culpa, aut dolores? Est consequuntur repellendus dolorum facere itaque dolores sit, accusamus sed soluta modi perspiciatis exercitationem sunt pariatur nostrum ipsa eaque, ratione alias porro cupiditate sequi sint officiis. Tenetur dignissimos beatae unde eligendi illo ab dolorem repudiandae nobis, rerum fugiat. Provident, quasi magni id consequatur asperiores explicabo at! Laudantium ipsam debitis animi vel. Voluptatem vel perspiciatis molestiae totam minus aperiam sint, aut natus! Modi debitis accusamus provident neque molestiae natus soluta quae assumenda dignissimos quidem at, dolore quo earum qui explicabo tempore quasi! Earum ratione perspiciatis quas voluptate nobis delectus, repudiandae quis tempore temporibus dignissimos voluptatibus corrupti, quos dolorem adipisci doloribus, magnam amet autem illo mollitia ipsum molestias officiis quod. Repellendus itaque dolore officia unde, autem quo error!</p>
+            <h2>Questions to answer</h2>
+
+            <ol>
+                <li>What is the distribution of education in the country (2020 and 2021)?</li>
+                <li>What is the top 5 with the highest proportion of individuals with higher education (2020 and 2021, congressional districts and states)?</li>
+                <li>Which is the bottom 5 with the lowest proportion of individuals with higher education (2020 and 2021, congressional districts and states)?</li>
+                <li>What is the top 5 with the highest proportion of individuals with less than a high school education (2020 and 2021 congressional districts and states)?</li>
+                <li>What is the bottom 5 with the lowest proportion of individuals with less than a high school education (2020 and 2021, congressional districts and states)?</li>
+                <li>What are the regions with the largest percentage increase in higher education from 2020 to 2021 (congressional districts and states)?</li>
+                <li>What are the regions with the lowest percentage increase in higher education from 2020 to 2021 (congressional districts and states)?</li>
+            </ol>
+
+            <h2>Proposed solution</h2>
+            <h3>Excel reports</h3>
+            <p>Static Excel reports showing comparative graphs and tables that answer the questions posed by state, congressional district and year.</p>
 
             <div class="dual-image">
-                <img src="/Sitio-web-personal/img/cover_03.jpg" alt="">
-                <img src="/Sitio-web-personal/img/cover_05.jpg" alt="">
+                <img src="./img/Reporte-excel-tablas1.png" alt="Reporte 1">
+                <img src="./img/Reporte-excel-tablas2.png" alt="Reporte 2">
             </div>
+
+            <h3>Interactive Dashboard in python with streamlit</h3>
+            <p>Interactive dashboard that addresses the questions posed regarding states by year and displays complementary information on proportions by educational levels.</p>
+
+            <img src="./img/Dashboard.gif" alt="Reporte 3" class="image">
+
+            <h2>Data quality and cleaning</h2>
+            <p>The following data quality check was performed as shown in the notebook <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Revision%20de%20datos/Educacion.ipynb">Educacion.ipynb</a>:</p>
+            <ul>
+                <li>Missing data</li>
+                <li>Duplicates and unique values in Year and Congressional District</li>
+                <li>Numerical value ranges</li>
+            </ul>
+            <p>The same procedure was done in Excel using <strong>Power Query</strong>, as can be seen in this <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Reportes%20Excel/Educacion.xlsx">Excel file</a>.</p>
+
+            <h2>Data transformation</h2>
+            <p>The following data transformation was performed as shown in the notebook <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Revision%20de%20datos/Educacion.ipynb">Educacion.ipynb</a>:</p>
+            <ul>
+                <li>Map state codes to state name (<strong>AK</strong>-><strong>Alaska</strong>)</li>
+                <li>Aggregate education data by state</li>
+                <li>Create columns with proportions (%) by educational level by state by year</li>
+                <li>Calculate percentage point difference from 2020 to 2021 by education level by state</li>
+            </ul>
+            <p>The same procedure was done in Excel using <strong>Power Query</strong>, as can be seen in this <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Reportes%20Excel/Educacion.xlsx">Excel file</a>.</p>
+
+            <h2>Answer to questions</h2>
+            <p>All the questions posed are answered by the Excel reports contained in the PDF file: <a href="https://github.com/Carrasco-Jorge/Educacion-EUA-2020vs2021/blob/main/Reportes%20Excel/Educacion.pdf">Educacion.pdf</a>. These reports have a similar format to the following images:</p>
+
+            <div class="dual-image">
+                <img src="./img/Reporte-excel-tablas1.png" alt="Reporte 1">
+                <img src="./img/Reporte-excel-tablas2.png" alt="Reporte 2">
+            </div>
+
+            <p>These reports have conditional formatting which facilitates the reading of the report and highlights the comparison between the different states and congressional districts mentioned in the pivot tables.</p>
+
+            <h2>Dashboard in python with streamlit</h2>
+            <p>The python dashboard answers all the questions posed regarding the states and displays additional information such as:</p>
+
+            <ul>
+                <li>Top 10 instead of Top 5 states for educational levels by selected year</li>
+                <li>% Increase / Change from 2020 to 2021 for the three levels of education</li>
+                <li>Pie chart for educational level distribution for the USA and all states</li>
+                <li>Interactive map representing the percentages of the selected educational level by state and selected year.</li>
+            </ul>
+
+            <img src="./img/Dashboard.gif" alt="Reporte 3" class="image">
+
+            <h2>Data source</h2>
+
+            <p class="word-break"><strong>Data source: <a href="https://www.kaggle.com/datasets/mittvin/u-s-census-dataset-education-finance-industry/data">https://www.kaggle.com/datasets/mittvin/u-s-census-dataset-education-finance-industry/data</a></strong></p>
+            <p><strong>Original license of the data: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0: Public Domain</a></strong></p>
         </div>
         <div class="socials">
             <a href="https://github.com/Carrasco-Jorge" target="_blank" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
