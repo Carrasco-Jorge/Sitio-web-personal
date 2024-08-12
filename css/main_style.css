@@ -367,10 +367,6 @@
     /* -- Projects -- */
     
     /* -- Exprience -- */
-    .flex-content {
-        flex-direction: row;
-    }
-
     .flex-skills {
         width: 35vw;
         line-height: 2em;
